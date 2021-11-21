@@ -1,5 +1,5 @@
 def main():
-    entrada = input(f"Por favor, ingrese un numero: ")
+    entrada = input(f"Por favor ingrese un número, si desea salir, escriba exit... ")
     salir = "exit"
     if entrada == salir:
         print("Hasta luego!")
