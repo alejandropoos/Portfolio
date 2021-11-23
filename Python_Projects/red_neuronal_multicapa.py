@@ -1,3 +1,4 @@
+#Red neuronal multicapa complejo
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,7 +18,7 @@ modelo.compile(optimizer=tf.keras.optimizers.Adam(0.1), loss='mean_squared_error
 
 #Entrenamiento del modelo
 print("Comenzando entrenamiento...")
-historial = modelo.fit(reloj, accu_check, epochs=1500, verbose=False)
+historial = modelo.fit(reloj, accu_check, epochs=600, verbose=False)
 print("Entrenamiento finalizado.")
 
 #Graficar resultados
@@ -27,8 +28,8 @@ plt.plot(historial.history['loss'])
 
 #Predicciones
 print("Hagamos una prediccion")
-resultado = modelo.predict([100.0])
-print(f"El resultado es {resultado}mg/dL de glucosa")
+resultado = int(modelo.predict([100.0]))
+print(f"El resultado es {resultado} mg/dL de glucosa")
 
 #Ver pesos y sesgos
 print("Variables internas del modelo")
