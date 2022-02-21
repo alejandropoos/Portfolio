@@ -7,4 +7,4 @@ Some of them are:
 
 >Complete automation of the Taxes process for a renowned Fulfillment and eCommerce company (Artificial Intelligence [NLP], internal API, Endpoints, Atlassian Jira API)
 
->Jira Crawler (Atlassian Jira API and Artificial Intelligence[NLP])
+>Jira Crawler (Atlassian Jira API)

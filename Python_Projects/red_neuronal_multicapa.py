@@ -10,7 +10,7 @@ mediciones = list()
 os.mkdir("data")
 os.mkdir("data/train")
 os.mkdir("data/test")
-with open("C://Users//voolkia//Documents//Mediciones.txt","r") as archivo:
+with open("Mediciones.txt","r") as archivo:
     for linea in archivo:
         mediciones.append(linea.strip("/n"))
 
