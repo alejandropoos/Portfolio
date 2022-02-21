@@ -1,11 +1,23 @@
 #Red neuronal multicapa complejo
+import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
-import matplotlib.pyplot as plt
+import os
+import pandas as pd
+
+mediciones = list()
+
+os.mkdir("data")
+os.mkdir("data/train")
+os.mkdir("data/test")
+with open("C://Users//voolkia//Documents//Mediciones.txt","r") as archivo:
+    for linea in archivo:
+        mediciones.append(linea.strip("/n"))
 
 # Importar datos - cuanto mas datos, mejor
-reloj = np.array([125, 85, 81, 100, 113], dtype=float)
-accu_check = np.array([117, 79, 90, 91, 115], dtype=float)
+#reloj = np.array([125, 85, 81, 100, 113], dtype=float)
+reloj = np.array(mediciones, dtype=float)
+accu_check = np.array([117, 79, 90, 91, 115, 96], dtype=float)
 
 #Capas del modelo - 1 entrada, 2 ocultas y 1 salida
 oculta1 = tf.keras.layers.Dense(units=3, input_shape=[1])
